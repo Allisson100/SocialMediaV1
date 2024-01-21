@@ -28,18 +28,18 @@ const FormLogin = () => {
 
             const userLogin = storage.getUserDatas('userDataSignin')
 
-            if (userLogin) {
-
-                setAuth(userLogin.userName)
+            if (!!userLogin) {
 
                 //Validation
                 if(values.password === userLogin.password && values.email === userLogin.email) {
 
-                    const addToken = {auth, token: 'tokenQualquer123'}
+                    const getData = storage.getUserDatas('userDataSignin')
+                    const addToken = {...getData, token: 'tokenQualquer123'}
+                    storage.setUserDatas(addToken,'userDataSignin')
                     setAuth(addToken)
 
                     resetForm()
-                    navigate('/')
+                    navigate('/createposts')
                 } else {
                     setErrorAlert('User not found in database, please check your e-mail and password!')
                 }

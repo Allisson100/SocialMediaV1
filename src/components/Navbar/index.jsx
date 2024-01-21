@@ -9,8 +9,8 @@ const Navbar = () => {
         <HeaderContainer>
             <nav>
                 <UlStyled>
-                    <LinkStyled to='/' $currentPath={pathname}>Create Post</LinkStyled>
-                    <LinkStyled to='/seePosts' $currentPath={pathname}>View Posts</LinkStyled>
+                    <LinkStyled to='/createposts' $currentPath={pathname}>Create Post</LinkStyled>
+                    <LinkStyled to='/seeposts' $currentPath={pathname}>View Posts</LinkStyled>
                 </UlStyled>
             </nav>
         </HeaderContainer>

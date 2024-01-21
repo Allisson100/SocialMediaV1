@@ -4,8 +4,6 @@ import Title from "../Title";
 
 const ShowPosts = ({ titleText , messages , onDelete = false }) => {
 
-    console.log('TESTE', messages);
-
     return (
         <UserPostsContainer>
             {titleText &&
@@ -24,7 +22,7 @@ const ShowPosts = ({ titleText , messages , onDelete = false }) => {
 
                 <Post 
                     key={message.id}
-                    user={message.user.auth}
+                    user={message.user.userName}
                     message={message.message}
                     date={message.date}
                     id={message.id}

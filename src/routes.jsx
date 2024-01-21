@@ -14,20 +14,21 @@ import SeePosts from "./pages/SeePosts"
 const RoutesApp = () => {
 
     const { auth } = useContext(AuthContext)
+    const isAuthenticated = Boolean(auth?.token);
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/login" element={<Login />}/>
-                <Route path="/signin" element={<Signin />}/>
                 <Route 
                     path="/" 
-                    element={auth.token ? <DefaultPage /> : <Navigate to='/signin'/>}
+                    element={isAuthenticated ? <DefaultPage /> : <Navigate to='/signin'/>}
                 >
-                    <Route index element={<CreatePosts />} />
-                    <Route path="/seePosts" element={<SeePosts />} />
+                    <Route path="/createposts" element={<CreatePosts />} />
+                    <Route path="/seeposts" element={<SeePosts />} />
 
                 </Route>
+                <Route path="/login" element={<Login />}/>
+                <Route path="/signin" element={<Signin />}/>
             </Routes>
         </BrowserRouter>
     )

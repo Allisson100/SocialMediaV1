@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
 
         const getAuth = storage.getUserDatas('userDataSignin')
 
-        if(getAuth) return getAuth.userName
+        if(getAuth) return getAuth
         
         return ''
     })
