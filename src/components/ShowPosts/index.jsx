@@ -16,7 +16,7 @@ const ShowPosts = ({ titleText , messages , onDelete = false }) => {
 
             {messages?.length === 0 &&
                 <EmptyMessage>
-                    You haven't created any messages yet
+                    You haven't created any posts yet
                 </EmptyMessage>
             }
             
