@@ -14,7 +14,7 @@ const FormLogin = () => {
 
     const navigate = useNavigate()
 
-    const { setAuth } = useContext(AuthContext)
+    const { auth , setAuth } = useContext(AuthContext)
     const { setErrorAlert } = useContext(ErrorContext)
 
 
@@ -34,6 +34,10 @@ const FormLogin = () => {
 
                 //Validation
                 if(values.password === userLogin.password && values.email === userLogin.email) {
+
+                    const addToken = {auth, token: 'tokenQualquer123'}
+                    setAuth(addToken)
+
                     resetForm()
                     navigate('/')
                 } else {

@@ -15,6 +15,8 @@ const CreatePosts = () => {
         message.user === auth
     ))
 
+    console.log('userMessages', userMessages);
+
     return (
         <CreatePostsContainer>
             <Title underline>Tell us what you're thinking today!</Title>

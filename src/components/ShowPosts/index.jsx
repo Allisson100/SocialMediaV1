@@ -4,7 +4,7 @@ import Title from "../Title";
 
 const ShowPosts = ({ titleText , messages , onDelete = false }) => {
 
-    console.log('TESTE',messages);
+    console.log('TESTE', messages);
 
     return (
         <UserPostsContainer>
@@ -16,7 +16,7 @@ const ShowPosts = ({ titleText , messages , onDelete = false }) => {
 
             {messages?.length === 0 &&
                 <EmptyMessage>
-                    You haven't created any posts yet
+                    You haven't created any posts yet   
                 </EmptyMessage>
             }
             
@@ -24,7 +24,7 @@ const ShowPosts = ({ titleText , messages , onDelete = false }) => {
 
                 <Post 
                     key={message.id}
-                    user={message.user}
+                    user={message.user.auth}
                     message={message.message}
                     date={message.date}
                     id={message.id}

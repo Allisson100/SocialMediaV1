@@ -22,7 +22,7 @@ const RoutesApp = () => {
                 <Route path="/signin" element={<Signin />}/>
                 <Route 
                     path="/" 
-                    element={auth ? <DefaultPage /> : <Navigate to='/signin'/>}
+                    element={auth.token ? <DefaultPage /> : <Navigate to='/signin'/>}
                 >
                     <Route index element={<CreatePosts />} />
                     <Route path="/seePosts" element={<SeePosts />} />

@@ -25,6 +25,7 @@ const FormSignin = () => {
         validationSchema: signinValidation(),
         onSubmit: (values, { resetForm }) => {
 
+            storage.deleteUserAndDatas('userDataSignin')
             storage.setUserDatas(values, 'userDataSignin')
 
             setErrorAlert('')
