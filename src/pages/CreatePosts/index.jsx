@@ -12,10 +12,12 @@ const CreatePosts = () => {
     const { messages } = useContext(MessagesContext)
 
     const userMessages = messages.filter((message) => (
-        message.user === auth
+        message.user.userName === auth.userName
     ))
 
+    console.log('messages', messages);
     console.log('userMessages', userMessages);
+    console.log('auth', auth);
 
     return (
         <CreatePostsContainer>

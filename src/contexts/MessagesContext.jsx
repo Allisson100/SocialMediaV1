@@ -17,7 +17,9 @@ export const MessagesProvider = ({ children }) => {
 
     useEffect(() => {
 
-        storage.setUserDatas(messages, 'messagesDatas')
+        const getMessages = storage.setUserDatas(messages, 'messagesDatas')
+        if(!!getMessages) setMessages(getMessages)
+        
 
     }, [messages])
 
