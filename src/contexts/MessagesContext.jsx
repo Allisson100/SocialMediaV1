@@ -19,7 +19,6 @@ export const MessagesProvider = ({ children }) => {
 
         const getMessages = storage.setUserDatas(messages, 'messagesDatas')
         if(!!getMessages) setMessages(getMessages)
-        
 
     }, [messages])
 

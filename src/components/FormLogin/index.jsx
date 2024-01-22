@@ -9,12 +9,14 @@ import { useNavigate } from "react-router-dom"
 import { useContext } from "react"
 import { AuthContext } from "../../contexts/AuthContext"
 import { ErrorContext } from "../../contexts/ErrorContext"
+import { MessagesContext } from "../../contexts/MessagesContext"
 
 const FormLogin = () => {
 
     const navigate = useNavigate()
 
-    const { auth , setAuth } = useContext(AuthContext)
+    const { setAuth } = useContext(AuthContext)
+    const { setMessages } = useContext(MessagesContext)
     const { setErrorAlert } = useContext(ErrorContext)
 
 
@@ -35,8 +37,12 @@ const FormLogin = () => {
 
                     const getData = storage.getUserDatas('userDataSignin')
                     const addToken = {...getData, token: 'tokenQualquer123'}
+
                     storage.setUserDatas(addToken,'userDataSignin')
                     setAuth(addToken)
+
+                    storage.setUserDatas([], 'messagesDatas')
+                    setMessages([])
 
                     resetForm()
                     navigate('/createposts')
