@@ -1,8 +1,7 @@
 import { BrowserRouter , Routes , Route , Navigate  } from "react-router-dom"
 
 import Login from "./pages/Login"
-import Signin from "./pages/Singin"
-import Home from "./pages/Home"
+import Signin from "./pages/Singup"
 
 import { AuthContext } from './contexts/AuthContext'
 import { useContext } from "react"
