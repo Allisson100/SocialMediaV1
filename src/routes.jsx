@@ -28,7 +28,7 @@ const RoutesApp = () => {
 
                 </Route>
                 <Route path="/login" element={<Login />}/>
-                <Route path="/signin" element={<Signin />}/>
+                <Route path="/signup" element={<Signin />}/>
             </Routes>
         </BrowserRouter>
     )

@@ -27,7 +27,7 @@ const Login = () => {
                 <AskAccount 
                     description = "Don't have an account?"
                     linkText = 'create your account'
-                    to = '/signin'
+                    to = '/signup'
                 />
             </Box>
         </LoginContainer>

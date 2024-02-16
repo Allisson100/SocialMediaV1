@@ -9,7 +9,7 @@ const Signin = () => {
     return (
         <SigninContainer>
             <Box>
-                <Title>Sign in</Title>
+                <Title>Signup</Title>
                 <FormSignin />
                 <AskAccount 
                     description = "Already have an account?"
