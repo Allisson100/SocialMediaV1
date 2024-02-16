@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const SigninContainer = styled.main `
+const SignupContainer = styled.main `
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,5 +9,5 @@ const SigninContainer = styled.main `
     min-height: 100vh;
 `
 export {
-    SigninContainer,
+    SignupContainer,
 }

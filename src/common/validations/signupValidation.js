@@ -1,8 +1,8 @@
 import * as Yup from 'yup'
 
-const signinValidation = () => {
+const signupValidation = () => {
 
-    const validationSigninSchema = Yup.object().shape({
+    const validationSignupSchema = Yup.object().shape({
 
         email: Yup.string()
             .required('Required field')
@@ -31,7 +31,7 @@ const signinValidation = () => {
             }),
     })
 
-    return validationSigninSchema
+    return validationSignupSchema
 }
 
-export default signinValidation
+export default signupValidation

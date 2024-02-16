@@ -4,12 +4,12 @@ import Button from "../Button"
 import { useNavigate } from 'react-router-dom'
 
 import { useFormik } from 'formik'
-import signinValidation from "../../common/validations/signinValidation"
+import signupValidation from "../../common/validations/signupValidation"
 import storage from "../../services/sessionStorage"
 import { useContext } from "react"
 import { ErrorContext } from "../../contexts/ErrorContext"
 
-const FormSignin = () => {
+const FormSignup = () => {
 
     const navigate = useNavigate()
     const { setErrorAlert } = useContext(ErrorContext)
@@ -22,7 +22,7 @@ const FormSignin = () => {
             confirmPassword: '',
             userName: '',
         },
-        validationSchema: signinValidation(),
+        validationSchema: signupValidation(),
         onSubmit: (values, { resetForm }) => {
 
             storage.deleteUserAndDatas('userDataSignin')
@@ -105,4 +105,4 @@ const FormSignin = () => {
     )
 }
 
-export default FormSignin
+export default FormSignup

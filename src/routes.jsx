@@ -1,7 +1,7 @@
 import { BrowserRouter , Routes , Route , Navigate  } from "react-router-dom"
 
 import Login from "./pages/Login"
-import Signin from "./pages/Singup"
+import Singup from "./pages/Singup"
 
 import { AuthContext } from './contexts/AuthContext'
 import { useContext } from "react"
@@ -20,14 +20,14 @@ const RoutesApp = () => {
             <Routes>
                 <Route 
                     path="/" 
-                    element={isAuthenticated ? <DefaultPage /> : <Navigate to='/signin'/>}
+                    element={isAuthenticated ? <DefaultPage /> : <Navigate to='/signup'/>}
                 >
                     <Route path="/createposts" element={<CreatePosts />} />
                     <Route path="/seeposts" element={<SeePosts />} />
 
                 </Route>
                 <Route path="/login" element={<Login />}/>
-                <Route path="/signup" element={<Signin />}/>
+                <Route path="/signup" element={<Singup />}/>
             </Routes>
         </BrowserRouter>
     )

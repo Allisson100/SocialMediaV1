@@ -1,24 +1,24 @@
 import AskAccount from "../../components/AskAccount"
 import Box from "../../components/Box"
-import FormSignup from "../../components/FormSignup"
+import FormSignin from "../../components/FormSignup"
 import Title from "../../components/Title"
-import { SignupContainer } from "./styles"
+import { SigninContainer } from "./styles"
 
-const Singup = () => {
+const Signin = () => {
 
     return (
-        <SignupContainer>
+        <SigninContainer>
             <Box>
                 <Title>Signup</Title>
-                <FormSignup />
+                <FormSignin />
                 <AskAccount 
                     description = "Already have an account?"
                     linkText = 'login'
                     to = '/login'
                 />
             </Box>
-        </SignupContainer>
+        </SigninContainer>
     )
 }
 
-export default Singup
+export default Signin
